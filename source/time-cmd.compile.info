@@ -1,0 +1,3 @@
+--exe time-cmd
+--use-path=source
+--use-project=xyo.static

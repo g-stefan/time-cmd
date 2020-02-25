@@ -1,0 +1,16 @@
+//
+// Time Cmd
+//
+// Copyright (c) 2020 Grigore Stefan <g_stefan@yahoo.com>
+// Created by Grigore Stefan <g_stefan@yahoo.com>
+//
+// MIT License (MIT) <http://opensource.org/licenses/MIT>
+//
+
+#include "xyo-application-version--os-windows-rc.hpp"
+#include "time-cmd-version.hpp"
+#include "time-cmd-copyright.hpp"
+
+1  ICON "time-cmd.ico"
+
+XYO_APPLICATION_VERSION_INFO(TIME_CMD,"time-cmd.exe","Show execution time of command for benchmark purposes")
