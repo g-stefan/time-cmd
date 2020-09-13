@@ -10,10 +10,10 @@
 #ifndef TIME_CMD_VERSION_HPP
 #define TIME_CMD_VERSION_HPP
 
-#define TIME_CMD_VERSION_ABCD                1,0,0,2
-#define TIME_CMD_VERSION_STR                 "1.0.0"
-#define TIME_CMD_VERSION_STR_BUILD           "2"
-#define TIME_CMD_VERSION_STR_DATETIME        "2020-02-24 03:06:44"
+#define TIME_CMD_VERSION_ABCD                1,1,0,3
+#define TIME_CMD_VERSION_STR                 "1.1.0"
+#define TIME_CMD_VERSION_STR_BUILD           "3"
+#define TIME_CMD_VERSION_STR_DATETIME        "2020-09-14 00:18:26"
 
 #ifndef XYO_RC
 
