@@ -3,7 +3,6 @@
 # http://unlicense.org/
 # Created by Grigore Stefan <g_stefan@yahoo.com>
 
-echo "-> clean time-cmd"
+echo "-> clean-local-release time-cmd"
 
-rm -rf bin
-rm -rf build
+rm -rf release

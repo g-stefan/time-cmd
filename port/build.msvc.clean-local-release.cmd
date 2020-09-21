@@ -3,7 +3,6 @@ rem Public domain
 rem http://unlicense.org/
 rem Created by Grigore Stefan <g_stefan@yahoo.com>
 
-echo -^> clean time-cmd
+echo -^> clean-local-release time-cmd
 
-if exist bin\ rmdir /Q /S bin
-if exist build\ rmdir /Q /S build
+if exist release\ rmdir /Q /S release
