@@ -3,11 +3,11 @@
 # http://unlicense.org/
 # Created by Grigore Stefan <g_stefan@yahoo.com>
 
-echo "-> local-release time-cmd"
+echo "-> release time-cmd"
 
 cmdX(){
 	if ! "$@" ; then
-		echo "Error: local-release"
+		echo "Error: release"
 		exit 1
 	fi
 }
