@@ -5,5 +5,5 @@
 
 echo "-> clean time-cmd"
 
-rm -rf bin
-rm -rf build
+rm -rf output
+rm -rf temp

@@ -17,4 +17,4 @@ cmdX(){
 	fi
 }
 
-cmdX xyo-cc --mode=$ACTION @source/time-cmd.compile
+cmdX xyo-cc --mode=$ACTION @build/source/time-cmd.compile
