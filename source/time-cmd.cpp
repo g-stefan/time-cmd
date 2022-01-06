@@ -12,41 +12,41 @@
 #include <string.h>
 
 #include "xyo.hpp"
+#include "time-cmd.hpp"
 #include "time-cmd-copyright.hpp"
 #include "time-cmd-license.hpp"
+#ifndef TIME_CMD_NO_VERSION
 #include "time-cmd-version.hpp"
+#endif
 
-namespace Main {
+namespace TimeCmd {
 
 	using namespace XYO;
 
-	class Application :
-		public virtual IMain {
-			XYO_DISALLOW_COPY_ASSIGN_MOVE(Application);
-		public:
-
-			inline Application() {};
-
-			void showUsage();
-			void showLicense();
-
-			int main(int cmdN, char *cmdS[]);
-	};
-
 	void Application::showUsage() {
 		printf("time-cmd - Show execution time of command for benchmark purposes\n");
-		printf("version %s build %s [%s]\n", TimeCmd::Version::version(), TimeCmd::Version::build(), TimeCmd::Version::datetime());
+		showVersion();
 		printf("%s\n\n", TimeCmd::Copyright::fullCopyright());
 
 		printf("%s",
 			"options:\n"
+			"    --usage             this info\n"
 			"    --license           show license\n"
+			"    --version           show version\n"
+			"example:\n"
+			"    time-cmd [command line]\n"
 		);
 		printf("\n");
 	};
 
 	void Application::showLicense() {
 		printf("%s", TimeCmd::License::content());
+	};
+
+	void Application::showVersion() {
+#ifndef TIME_CMD_NO_VERSION
+		printf("version %s build %s [%s]\n", TimeCmd::Version::version(), TimeCmd::Version::build(), TimeCmd::Version::datetime());
+#endif
 	};
 
 	int Application::main(int cmdN, char *cmdS[]) {
@@ -58,7 +58,7 @@ namespace Main {
 		String cmdLine;
 		int retV;
 
-		if (cmdN >= 2) {
+		if (cmdN > 1) {
 			if (StringCore::beginWith(cmdS[1], "--")) {
 				opt = &cmdS[1][2];
 				optValue = "";
@@ -66,12 +66,16 @@ namespace Main {
 					optValue = String::substring(opt, optIndex + 1);
 					opt = String::substring(opt, 0, optIndex);
 				};
+				if (opt == "usage") {
+					showUsage();
+					return 0;
+				};
 				if (opt == "license") {
 					showLicense();
 					return 0;
 				};
-				if (opt == "usage") {
-					showUsage();
+				if (opt == "version") {
+					showVersion();
 					return 0;
 				};
 			};
@@ -99,4 +103,6 @@ namespace Main {
 
 };
 
-XYO_APPLICATION_MAIN_STD(Main::Application);
+#ifndef TIME_CMD_LIBRARY
+XYO_APPLICATION_MAIN_STD(TimeCmd::Application);
+#endif

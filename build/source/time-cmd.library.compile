@@ -1,0 +1,7 @@
+--lib time-cmd
+--def=TIME_CMD_LIBRARY
+--src-hpp=source/time-cmd.hpp
+--build-include
+--no-default-include
+--install-include-direct
+--use-project=xyo.static

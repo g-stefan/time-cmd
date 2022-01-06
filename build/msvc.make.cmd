@@ -19,4 +19,4 @@ exit 1
 :cmdXDefined
 
 call :cmdX xyo-cc --mode=%ACTION% @build/source/time-cmd.compile
-
+call :cmdX xyo-cc --mode=%ACTION% @build/source/time-cmd.library.compile

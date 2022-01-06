@@ -18,3 +18,4 @@ cmdX(){
 }
 
 cmdX xyo-cc --mode=$ACTION @build/source/time-cmd.compile
+cmdX xyo-cc --mode=$ACTION @build/source/time-cmd.library.compile
