@@ -16,7 +16,7 @@
 #include "time-cmd-copyright.hpp"
 #include "time-cmd-license.hpp"
 #ifndef TIME_CMD_NO_VERSION
-#include "time-cmd-version.hpp"
+#	include "time-cmd-version.hpp"
 #endif
 
 namespace TimeCmd {
@@ -29,13 +29,12 @@ namespace TimeCmd {
 		printf("%s\n\n", TimeCmd::Copyright::fullCopyright());
 
 		printf("%s",
-			"options:\n"
-			"    --usage             this info\n"
-			"    --license           show license\n"
-			"    --version           show version\n"
-			"example:\n"
-			"    time-cmd [command line]\n"
-		);
+		       "options:\n"
+		       "    --usage             this info\n"
+		       "    --license           show license\n"
+		       "    --version           show version\n"
+		       "example:\n"
+		       "    time-cmd [command line]\n");
 		printf("\n");
 	};
 
@@ -62,7 +61,7 @@ namespace TimeCmd {
 			if (StringCore::beginWith(cmdS[1], "--")) {
 				opt = &cmdS[1][2];
 				optValue = "";
-				if(String::indexOf(opt, "=", 0, optIndex)) {
+				if (String::indexOf(opt, "=", 0, optIndex)) {
 					optValue = String::substring(opt, optIndex + 1);
 					opt = String::substring(opt, 0, optIndex);
 				};
@@ -81,9 +80,9 @@ namespace TimeCmd {
 			};
 		};
 
-		for(i = 1; i < cmdN; ++i) {
+		for (i = 1; i < cmdN; ++i) {
 			cmdLine << cmdS[i];
-			if(i + 1 < cmdN) {
+			if (i + 1 < cmdN) {
 				cmdLine << " ";
 			};
 		};
@@ -91,7 +90,6 @@ namespace TimeCmd {
 		uint64_t beginTimestampInMilliseconds;
 		uint64_t endTimestampInMilliseconds;
 		uint64_t intervalTimestampInMilliseconds;
-
 
 		beginTimestampInMilliseconds = DateTime::timestampInMilliseconds();
 		retV = system(cmdLine);

@@ -10,10 +10,10 @@
 #ifndef TIME_CMD_VERSION_HPP
 #define TIME_CMD_VERSION_HPP
 
-#define TIME_CMD_VERSION_ABCD                1,13,0,28
-#define TIME_CMD_VERSION_STR                 "1.13.0"
-#define TIME_CMD_VERSION_STR_BUILD           "28"
-#define TIME_CMD_VERSION_STR_DATETIME        "2022-01-09 01:13:04"
+#define TIME_CMD_VERSION_ABCD 1,14,0,32
+#define TIME_CMD_VERSION_STR "1.14.0"
+#define TIME_CMD_VERSION_STR_BUILD "32"
+#define TIME_CMD_VERSION_STR_DATETIME "2022-04-04 01:44:48"
 
 #ifndef XYO_RC
 
@@ -28,4 +28,3 @@ namespace TimeCmd {
 
 #endif
 #endif
-
