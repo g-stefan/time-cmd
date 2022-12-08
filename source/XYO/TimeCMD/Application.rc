@@ -1,0 +1,13 @@
+// Time CMD
+// Copyright (c) 2022 Grigore Stefan <g_stefan@yahoo.com>
+// MIT License (MIT) <http://opensource.org/licenses/MIT>
+// SPDX-FileCopyrightText: 2022 Grigore Stefan <g_stefan@yahoo.com>
+// SPDX-License-Identifier: MIT
+
+#include <XYO/TimeCMD/Application.rh>
+#include <XYO/TimeCMD/Copyright.rh>
+#include <XYO/TimeCMD/Version.rh>
+
+1  ICON "Application.ico"
+
+XYO_APPLICATION_VERSION_INFO(XYO_TIMECMD,"time-cmd.exe","Show execution time of command for benchmark purposes")
