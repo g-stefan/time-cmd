@@ -7,10 +7,9 @@
 #ifndef XYO_TIMECMD_COPYRIGHT_RH
 #define XYO_TIMECMD_COPYRIGHT_RH
 
-#define XYO_TIMECMD_COPYRIGHT "Copyright (c) 2022 Grigore Stefan"
+#define XYO_TIMECMD_COPYRIGHT "Copyright (c) 2022 Grigore Stefan <g_stefan@yahoo.com>"
 #define XYO_TIMECMD_PUBLISHER "Grigore Stefan"
 #define XYO_TIMECMD_COMPANY XYO_TIMECMD_PUBLISHER
 #define XYO_TIMECMD_CONTACT "g_stefan@yahoo.com"
-#define XYO_TIMECMD_FULL_COPYRIGHT XYO_TIMECMD_COPYRIGHT " <" XYO_TIMECMD_CONTACT ">"
 
 #endif

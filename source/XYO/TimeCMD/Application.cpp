@@ -14,7 +14,7 @@ namespace XYO::TimeCMD {
 	void Application::showUsage() {
 		printf("time-cmd - Show execution time of command for benchmark purposes\n");
 		showVersion();
-		printf("%s\n\n", TimeCMD::Copyright::fullCopyright());
+		printf("%s\n\n", TimeCMD::Copyright::copyright());
 
 		printf("%s",
 		       "options:\n"
@@ -26,8 +26,8 @@ namespace XYO::TimeCMD {
 		printf("\n");
 	};
 
-	void Application::showLicense() {		
-		printf("%s%s", TimeCMD::License::licenseHeader(), TimeCMD::License::licenseBody());		
+	void Application::showLicense() {
+		printf("%s", TimeCMD::License::license());
 	};
 
 	void Application::showVersion() {
