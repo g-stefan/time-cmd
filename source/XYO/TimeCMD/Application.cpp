@@ -14,7 +14,7 @@ namespace XYO::TimeCMD {
 	void Application::showUsage() {
 		printf("time-cmd - Show execution time of command for benchmark purposes\n");
 		showVersion();
-		printf("%s\n\n", TimeCMD::Copyright::copyright().c_str());
+		printf("%s\n\n", TimeCMD::Copyright::copyright());
 
 		printf("%s",
 		       "options:\n"
@@ -52,9 +52,9 @@ namespace XYO::TimeCMD {
 			if (StringCore::beginWith(cmdS[1], "--")) {
 				opt = &cmdS[1][2];
 				optValue = "";
-				if (String::indexOf(opt, "=", 0, optIndex)) {
-					optValue = String::substring(opt, optIndex + 1);
-					opt = String::substring(opt, 0, optIndex);
+				if (StringX::indexOf(opt, "=", 0, optIndex)) {
+					optValue = StringX::substring(opt, optIndex + 1);
+					opt = StringX::substring(opt, 0, optIndex);
 				};
 				if (opt == "usage") {
 					showUsage();
