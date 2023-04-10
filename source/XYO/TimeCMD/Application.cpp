@@ -52,9 +52,9 @@ namespace XYO::TimeCMD {
 			if (StringCore::beginWith(cmdS[1], "--")) {
 				opt = &cmdS[1][2];
 				optValue = "";
-				if (StringX::indexOf(opt, "=", 0, optIndex)) {
-					optValue = StringX::substring(opt, optIndex + 1);
-					opt = StringX::substring(opt, 0, optIndex);
+				if (opt.indexOf( "=", 0, optIndex)) {
+					optValue = opt.substring( optIndex + 1);
+					opt = opt.substring( 0, optIndex);
 				};
 				if (opt == "usage") {
 					showUsage();
