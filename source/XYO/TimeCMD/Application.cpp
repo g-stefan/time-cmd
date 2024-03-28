@@ -91,7 +91,7 @@ namespace XYO::TimeCMD {
 		retV = system(cmdLine);
 		endTimestampInMilliseconds = DateTime::timestampInMilliseconds();
 		intervalTimestampInMilliseconds = endTimestampInMilliseconds - beginTimestampInMilliseconds;
-		printf("Execution time: " XYO_FORMAT_SIZET " ms\n", (size_t)intervalTimestampInMilliseconds);
+		printf("Execution time: " XYO_PLATFORM_FORMAT_SIZET " ms\n", (size_t)intervalTimestampInMilliseconds);
 		return retV;
 	};
 };
