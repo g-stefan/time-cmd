@@ -1,5 +1,6 @@
 {
 	"solution": {
+		"namespace" : "xyo",
 		"name" : "time-cmd",
 		"type" : "xyo-cpp",
 		"projects": [
